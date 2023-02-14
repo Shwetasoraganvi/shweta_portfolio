@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>personal portfolio website</title>
+       
+        <!-- BOOTSTRAP-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+           *{
+    margin:0;
+    padding:0;
+    font-family:'Poppins',sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-image:url("https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png");
+    background-size: cover;
+    background-position: center;
+}
+.navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: end;
+    background-color: black;
+    color:white;
+    
+    
+
+}
+.navbar a{
+    float: left;
+}
+.brand-title{
+    font-size: 30px;
+    margin:5rem;
+
+}
+.navbar-links ul{
+ 
+    display:flex;
+}
+.navbar-links li{
+    list-style: none;
+
+}
+
+.navbar-links li a{
+    text-decoration: none;
+    color: white;
+     display:block;
+    font-size: 18px;
+}
+.navbar-links li:hover{
+    background-color: #555;
+
+}
+.toggle-button{
+    position:absolute;
+    top:.75rem;
+    right:1rem;
+    display:none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.toggle-button .bar{
+    height: 3px;
+    width:100%;
+    background-color: white;
+    border-radius:10px;
+
+}
+
+@media(max-width: 400px){
+    .toggle-button{
+        display:flex
+    }
+    .navbar-links{
+        /*display:none ;*/
+        width: 100%;
+    }
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+    .navbar-links ul{
+        width:100%;
+        flex-direction: column;
+
+    }
+    .navbar-links li{
+        text-align: center;
+
+    }
+.navbar-links li a{
+    padding: .5rem 1rem;
+}
+
+}
+
+
+.header{
+     width: 100%;
+     height: 100vh;    
+}
+.container{
+    padding:10px 10%;
+}
+
+
+
+
+
+.header-text h1{
+    margin-top: 20px;
+    font-size: 60px;
+}
+
+.header-text{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
+}
+
+
+/* -----------------------about-----------------------*/
+
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.sub-tiitle{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/*-----------Education Section---------------*/
+
+section{
+    width:100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 100%;
+    padding: 35px  10%;
+}
+
+main.row{
+    display: grid;
+    
+}
+
+/*---------------------Contact Me---------------- */
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    margin-right: 15px;
+    font-size: 25px;
+    color:black;
+}
+
+.social-icons{
+    margin-top:30px;
+
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform:translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background-color:black;
+    color: #ababab;
+}
+.contact-right form{
+    width: 100%;
+
+}
+form input, form textarea{
+    width: 100%;
+    border:0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#msg{
+    color: #0c110bd7;
+    margin-top: 20px;
+    display: block;}
+
+    
+
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <div style="width: 100%; height: 100Vh;">
+        <nav class="navbar" style="position: fixed; width: 100%; float: left;">
+           
+            <div class="navbar-links" >
+                
+                <ul>
+                    <li style="padding: 10px;"><a href="#">Home </a></li>
+                    <li style="padding: 10px;"><a href="#aboutme">About</a></li>
+                    <li style="padding: 10px;"><a href="#education">Education</a></li>
+                    <li style="padding: 10px;"><a href="#contactme">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <br>
+            <br>
+                <br>
+                <div class="header-text">
+                   <div> <h1 style="font-size: 50px;color: black; padding: 50px;margin: 50px;">  Hi,
+                    <br>I'am Shweta Soraganvi <br>from India </h1>
+                    </div>
+                    <div>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+      <!-- ------------------------about---------------------- -->
+        </div>
+        <div style="width:100%; height:100vh;" >
+        <div id="aboutme"></div>
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="shweta1.jpeg" width="100" height="300px">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title" style="font-size: 35px; color: black;">About me</h1>
+                        <p style="font-size: 25px; color: black;">
+                             
+                                  Hi, my name is Shweta Soraganvi. I am studying in Gogte Institute Of Technology ,Belagavi.
+                             I can speak three language. I done  Data visualisation and tools internship in my college. My hobbies are reading books , playing outdoor games and coocking. 
+
+
+
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <!--Education part-->
+        <div id="education"></div>
+        <div class="container" style="width: 100px;height: 100vh;">
+            <main class="row">
+        <section class="col">
+            <header class="title">
+                <h2>EDUCATION</h2>
+            </header>
+
+            <div class="contents">
+                <div class="box">
+                    <h4>2016--2018</h4>
+                    <h3>High school</h3>
+                    <p><pre style="font-size: 20px;">Shree Kumareshwar High School bidari
+ SSLC Percentage = 96%                                               
+                   </pre> </p>
+                    </div>
+
+                    <div class="box">
+                        <h4>2019-2021</h4>
+                        <h3>College</h3>
+                        <p><pre style="font-size: 20px;">Science and Commerce College Sainiketan Jamakhandi                                              
+ PUC Percentage = 98%      </pre></p>
+                        </div>
+
+                        <div class="box">
+                            <h4>2022-2025</h4>
+                            <h3>Degree</h3>
+                            <p><pre style="font-size: 20px;"> Gogte Institute of Technology, Belagavi                                               
+                               </pre></p>
+                            </div>
+
+                
+            </div>
+            
+        </section>
+        </main>
+        </div>
+       
+             <!-- contact me-->
+
+             <div style="margin-top: 80px;" >
+
+                
+        <div id="contactme"></div>
+       
+        <div id="contact" style="width: 100px; height:100vh;">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title" style="color: black; margin: 25px;">Contact Me</h1>
+                        <p style="color: black; margin: 25px;"  >shwetatsoraganvitimmmappa@gmail.com</p>
+                        <p style="color: black;margin: 25px;">1234567891</p>
+                        <div class="social-icons">
+                            <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></i></a>
+                            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                       
+                    </div>
+                    <div class="contact-right" style="margin: 25px;">
+                        <form  name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name"  style="width: 500px; height:59px;" required>
+                        <input type="email" name="Email" placeholder="your email" required>
+                        <textarea name="Message"  rows="6" placeholder="Your message"></textarea>
+                        <button  type="submit" class="btn btn2" onclick="document.getElementById('msg').innerHTML='Message sent succussfully'">Submit</button>
+                        </form>
+                        <span id="msg" ></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+            
+        </div>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbww853NrB-buiCVctBfQxmFk84HSzGCXJvd7SuaNhcewSWbXrhuY7Ll0yArpGbRCx2VdA/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg= document.getElementById("msg")
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {msg.innerHTML="Message sent successfully"
+              setTimeout(function(){
+                msg.innerHTML=" Message "
+              },5000)
+              form.reset()
+            })
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+    </body>
+</html>
